@@ -20,8 +20,12 @@ let toMatchGallery = (person) => {
   let view_profile_btn = createBtn(
     `View Profile|web_url|${view_profile_url}`,
   );
+  
+  let message_btn = createBtn(
+    `Message Me|web_url|${person.fields['Messenger Link']}`,
+  );
 
-  let buttons = [view_profile_btn];
+  let buttons = [view_profile_btn, message_btn];
 
   return { title, subtitle, buttons };
 }
